@@ -2,7 +2,6 @@
 # function: translating to persian with chatgpt
 # output: persian text
 
-
 import os
 import openai
 from dotenv import load_dotenv
@@ -12,7 +11,6 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-
 if openai.api_key is None:
     raise ValueError("OpenAI API key not found. Please set it in the .env file.")
 
@@ -20,7 +18,6 @@ english_text = "Hello, how are you?"
 
 # english_text = input("Enter the English text to translate: ")
 # it's another feature that can be made on this project and i've put it here to remember its idea in the future.
-
 
 try:
     response = openai.ChatCompletion.create(
@@ -39,4 +36,6 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
+
+# the end...
 
