@@ -2,7 +2,7 @@ import os
 import openai
 from dotenv import load_dotenv
 
-# i'm using for openai's api through another .env file.
+# i'm using for openai's api through another ".env" file.
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -13,7 +13,9 @@ if openai.api_key is None:
 
 english_text = "Hello, how are you?"
 
-#english_text = input("Enter the English text to translate: ")
+# english_text = input("Enter the English text to translate: ")
+# it's another feature that can be made on this project and i've put it here to remember its idea in the future.
+
 
 try:
     response = openai.ChatCompletion.create(
