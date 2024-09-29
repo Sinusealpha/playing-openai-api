@@ -1,3 +1,8 @@
+# imput: english text
+# function: translating to persian with chatgpt
+# output: persian text
+
+
 import os
 import openai
 from dotenv import load_dotenv
