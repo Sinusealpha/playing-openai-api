@@ -1,7 +1,8 @@
-
 import os
 import openai
 from dotenv import load_dotenv
+
+# i'm using for openai's api through another .env file.
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -25,7 +26,6 @@ try:
         ]
     )
 
-    # Step 4: Extract and print the Persian translation
     persian_translation = response['choices'][0]['message']['content'].strip()
     print("Persian Translation:")
     print(persian_translation)
